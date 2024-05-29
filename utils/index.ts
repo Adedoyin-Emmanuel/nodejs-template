@@ -1,4 +1,4 @@
-import connectToDb from "./connectToDb";
+import connectToDb from "./database";
 import { formatDateTime, toJavaScriptDate } from "./date";
 import response from "./response";
 
