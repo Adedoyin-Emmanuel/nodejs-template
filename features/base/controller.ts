@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import { response } from "./../../utils";
 
-class HelloController {
-  static async hello(req: Request, res: Response) {
-    return response(res, 200, "Hello World, Welcome to my API");
+class BaseController {
+  static async Hello(req: Request, res: Response) {
+    return response(res, 200, "Hello from the base controller!");
   }
 }
 
-export default HelloController;
+export default BaseController;
