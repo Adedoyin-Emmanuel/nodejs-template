@@ -1,4 +1,5 @@
 import transporter from "../../utils/mail.config";
+import logger from "../../utils/logger";
 
 const sendEmail = (
   subject: string,
@@ -14,7 +15,7 @@ const sendEmail = (
     };
     transporter.sendMail(mailOptions, (error) => {
       if (error) {
-        console.error("Error sending mail:", error);
+        logger.error(error);
         reject(error);
       } else {
         resolve(true);
@@ -22,6 +23,5 @@ const sendEmail = (
     });
   });
 };
-
 
 export default sendEmail;
