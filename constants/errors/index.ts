@@ -1,1 +1,1 @@
-export const INVALID_FILE_TYPE = "Invalid file type";
+export const ROUTE_NOT_FOUND = "Route not found";
