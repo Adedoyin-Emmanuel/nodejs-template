@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import response from "../utils/response";
+import logger from "../utils/logger";
+import { SOMETHING_WENT_WRONG } from "../constants/errors";
 
 const useErrorHandler = (
   err: Error,
@@ -7,12 +9,12 @@ const useErrorHandler = (
   res: Response,
   next: any
 ) => {
-  console.log(err);
+  logger.error(err);
   const isProduction = process.env.NODE_ENV === "production";
   return response(
     res,
     500,
-    `Something went wrong, please try again later!n ${isProduction ? "" : err}`
+    `${SOMETHING_WENT_WRONG} ${isProduction ? "" : err}`
   );
 };
 
