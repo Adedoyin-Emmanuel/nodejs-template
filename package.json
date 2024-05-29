@@ -39,6 +39,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
     "nodemon": "^3.0.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   },
   "engines": {
@@ -46,10 +47,8 @@
   },
   "dependencies": {
     "@prisma/client": "^5.14.0",
-    "@uploadfly/js": "^1.0.6",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
-    "build": "^0.1.4",
     "cloudinary": "^2.2.0",
     "config": "^3.3.9",
     "cookie-parser": "^1.4.6",
@@ -59,15 +58,11 @@
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "express-rate-limit": "^7.0.2",
-    "express-slow-down": "^1.6.0",
     "joi": "^17.10.2",
     "jsonwebtoken": "^9.0.2",
-    "lodash": "^4.17.21",
-    "mongoose": "^7.5.3",
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.6",
     "prisma": "^5.14.0",
-    "rimraf": "^5.0.5",
     "socket.io": "^4.7.2",
     "ts-node": "^10.9.1",
     "uuid": "^9.0.1"
