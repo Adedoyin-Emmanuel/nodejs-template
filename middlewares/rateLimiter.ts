@@ -1,35 +1,19 @@
-import config from "config";
 import { rateLimit } from "express-rate-limit";
+import {
+  GLOBAL_REQUEST_PER_MINUTE,
+  GLOBAL_RATE_LIMIT_WINDOW_MS,
+} from "../constants/app";
 
 const defaultMessage = {
   code: 429,
+  success: false,
   status: "Too many requests",
-  message: "Too many requests chief, try again later",
+  message: "Too many requests, try again later",
   data: {},
 };
 
-const useRateLimiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: config.get("App.request-limit"),
+export const useGolbalRateLimiter = rateLimit({
+  windowMs: GLOBAL_RATE_LIMIT_WINDOW_MS,
+  max: GLOBAL_REQUEST_PER_MINUTE,
   message: defaultMessage,
 });
-
-export const useLoginRateLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: config.get("App.login-request-limit"),
-  message: defaultMessage,
-});
-
-export const useCreateUserLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: config.get("App.login-request-limit"),
-  message: defaultMessage,
-});
-
-export const useVerifyLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000,
-  max: config.get("App.verify-user-request-limit"),
-  message: defaultMessage,
-});
-
-export default useRateLimiter;
