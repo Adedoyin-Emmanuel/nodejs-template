@@ -8,9 +8,12 @@ import morgan from "morgan";
 import { useErrorHandler, useNotFound } from "./middlewares/";
 import corsOptions from "./utils/corsOptions";
 import { accessLogStream, logger } from "./utils";
-import baseRouter from "./features/base/route";
 import { PORT, IS_PRODUCTION, MORGAN_CONFIG } from "./constants/app";
 import helmet from "helmet";
+
+
+import baseRouter from "./features/base/route";
+import swaggerRouter from "./swagger";
 dotenv.config();
 
 const app = express();
@@ -28,6 +31,7 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api/", baseRouter);
+app.use("/api-docs", swaggerRouter);
 
 app.use(useNotFound);
 app.use(useErrorHandler);
