@@ -4,7 +4,8 @@ const connectToDb = async (): Promise<any> => {
   try {
     await prisma.$connect();
   } catch (error: any) {
-    console.log(error);
+    logger.error(error);
+    throw error;
   }
 };
 

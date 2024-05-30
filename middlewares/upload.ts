@@ -1,5 +1,5 @@
-import multer, { ErrorCode, Multer } from "multer";
-import logger from "../utils/logger";
+import multer from "multer";
+import {logger} from "../utils/";
 import response from "../utils/response";
 import localStorage from "../services/upload/local";
 import cloudinaryStorage from "../services/upload/cloudinary";

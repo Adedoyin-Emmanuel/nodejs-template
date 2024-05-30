@@ -7,8 +7,7 @@ import "express-async-errors";
 import morgan from "morgan";
 import { useErrorHandler, useNotFound } from "./middlewares/";
 import corsOptions from "./utils/corsOptions";
-import logger from "./utils/logger";
-import accessLogStream from "./utils/accessLog";
+import {accessLogStream, logger} from "./utils";
 dotenv.config();
 
 const PORT = process.env.PORT || 2800;

@@ -1,5 +1,5 @@
 import transporter from "../../utils/mail.config";
-import logger from "../../utils/logger";
+import { logger } from "../../utils";
 
 const sendEmail = (
   subject: string,
