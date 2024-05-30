@@ -4,22 +4,31 @@ This is a simple nodejs, express boilerplate that comes with pretty much anythin
 
 ## Table of Contents 🧰
 
-- [Features](#features-🔦)
-- [Installation](#installation-💽)
-- [Contributing](#contributing-❤️)
-- [License](#license-🧐)
-- [Contributors](##contibutors-👨‍)
+- [NodeJs Template 🚀](#nodejs-template-)
+  - [Table of Contents 🧰](#table-of-contents-)
+  - [Features 🔦](#features-)
+  - [Installation 💽](#installation-)
+  - [Contributing ❤️](#contributing-️)
+  - [License 🧐](#license-)
+  - [Contibutors 👨‍](#contibutors-)
 
 ## Features 🔦
 
 This template comes with bunch of ready made configurations like
 
 1. Rate Limiter
-2. Rate Slow Down
-3. Error Middleware to catch errors anywhere in your entire application.
-4. Not Found Middleware to catch undefined routes or methods.
-5. Sockets for Realtime updates or Bidirectional communication between server and client.
-6. Config module to specify simple configurations
+2. Error Middleware to catch errors anywhere in your entire application.
+3. Not Found Middleware to catch undefined routes or methods.
+4. Config module to specify simple configurations
+5. Error and App constants to store error messages and app constants.
+6. Logger module to log errors and info to the console or file.
+7. Dockerfile to build a docker image of the application.
+8. Prisma ORM to interact with the database.
+9. Swagger documentation to document the API.
+10. Jest and Supertest for testing the application.
+11. Service base architecture to structure the application.
+12. Eslint and Prettier to enforce code style and formatting.
+13. Feature based architecture to structure the application.
 
 ## Installation 💽
 
@@ -57,6 +66,6 @@ If you'd like to contribute to **nodejs-template**, please follow these steps:
 
 ## Contibutors 👨‍
 
-<img src="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci82YjdmNjY1YjY5NzNlMTA5MDY5NWYxNGQ5ZTFjN2FlMT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.VLsXZqAcYRo73KaG7EmkZtMv67-fHx-8x4Fo_nXv_b4"  width="200" height="200"/>
+<img src="https://github.com/adedoyin-emmanuel.png"  width="200" height="200"/>
 
 <a target="_blank" href="https://youtube.com/@adedoyin-emmanuel">Adedoyin Emmanuel Adeniyi</a>
