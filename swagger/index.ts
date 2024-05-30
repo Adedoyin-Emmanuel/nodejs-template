@@ -9,13 +9,13 @@ swaggerRouter.get("/swagger.json", (req, res) => {
 });
 
 swaggerRouter.get("/api-docs", (req, res) => {
-  const redocHtmlPath = path.join(__dirname + "/ui", "redoc-ui.html");
+  const redocHtmlPath = path.join(__dirname + "/ui", "redoc.html");
 
   res.sendFile(redocHtmlPath);
 });
 
 swaggerRouter.get("/swagger-ui", (req, res) => {
-  const swaggerUiHtmlPath = path.join(__dirname, "/ui", "swagger-ui.html");
+  const swaggerUiHtmlPath = path.join(__dirname, "/ui", "swagger.html");
 
   res.sendfile(swaggerUiHtmlPath);
 });
