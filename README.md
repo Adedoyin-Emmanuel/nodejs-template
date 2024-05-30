@@ -29,7 +29,6 @@ This template comes with bunch of ready made configurations like
 11. Service base architecture to structure the application.
 12. Eslint and Prettier to enforce code style and formatting.
 13. Feature based architecture to structure the application.
-14. 
 
 ## Installation 💽
 
