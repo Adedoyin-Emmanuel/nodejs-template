@@ -1,7 +1,7 @@
 const allowedOrigins = ["http://localhost:2800"];
 
 const corsOptions = {
-  origin: (origin, callback) => {
+  origin: (origin: any, callback: any) => {
     const allowedOriginPatterns = allowedOrigins.map(
       (origin) =>
         new RegExp(`^${origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`)
