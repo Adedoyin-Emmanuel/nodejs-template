@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: bitnami/postgres:latest
+    image: bitnami/postgresql:latest
     container_name: postgres
     environment:
       - POSTGRES_USER=admin

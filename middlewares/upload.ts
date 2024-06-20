@@ -8,6 +8,7 @@ import { LIMIT_FILE_SIZE, UNSUPPORTED_FILE_TYPE } from "../constants/errors";
 import {
   ALLOWED_FILE_UPLOAD_EXTENSIONS,
   MAX_FILE_SIZE,
+  IS_PRODUCTION
 } from "../constants/app";
 
 declare global {
@@ -58,9 +59,8 @@ const upload = multer({
 
 const fileUpload = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const isProduction = process.env.NODE_ENV === "production";
     // @ts-ignore
-    req.storage = isProduction ? await cloudinaryStorage() : localStorage();
+    req.storage = IS_PRODUCTION ? await cloudinaryStorage() : await localStorage();
     next();
   } catch (error) {
     next(error);
